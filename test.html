@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Results</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <h1>Exam Results</h1>
+    <div class="container">
+        <form id="exam-form">
+            <h2>Test Name</h2>
+            <div class="form-group">
+                <label for="test-name">Test Name:</label>
+                <input type="text" id="test-name" name="testName" required>
+            </div>
+            <br><br><br><br><br>
+            <h2>Physics</h2>
+            <div class="form-group">
+                <label for="physics-total">Total Questions:</label>
+                <input type="number" id="physics-total" name="physicsTotal" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="physics-attempted">Attempted Questions:</label>
+                <input type="number" id="physics-attempted" name="physicsAttempted" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="physics-correct">Correct Answers:</label>
+                <input type="number" id="physics-correct" name="physicsCorrect" min="0" required>
+            </div>
+            <h2>Chemistry</h2>
+            <div class="form-group">
+                <label for="chemistry-total">Total Questions:</label>
+                <input type="number" id="chemistry-total" name="chemistryTotal" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="chemistry-attempted">Attempted Questions:</label>
+                <input type="number" id="chemistry-attempted" name="chemistryAttempted" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="chemistry-correct">Correct Answers:</label>
+                <input type="number" id="chemistry-correct" name="chemistryCorrect" min="0" required>
+            </div>
+            <h2>Maths</h2>
+            <div class="form-group">
+                <label for="maths-total">Total Questions:</label>
+                <input type="number" id="maths-total" name="mathsTotal" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="maths-attempted">Attempted Questions:</label>
+                <input type="number" id="maths-attempted" name="mathsAttempted" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="maths-correct">Correct Answers:</label>
+                <input type="number" id="maths-correct" name="mathsCorrect" min="0" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="results"></div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <h1>Rank you can get</h1>
+    <div id="input-container">
+        <h2>Your Information</h2>
+        <label for="score">JEE Tests Score:</label>
+        <input type="number" id="score" min="0" required>
+        <br>
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="mains">Mains</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <br>
+        <button onclick="predictRank()">Predict Rank</button>
+    </div>
+    <div id="output-container">
+        <p id="predicted-rank"></p>
+    </div>
+    <script src="Website/script.js"></script>
+    <script src="Website/script2.js"></script>
+</body>
+</html>
