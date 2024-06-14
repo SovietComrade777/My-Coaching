@@ -1,0 +1,96 @@
+/* Font Awesome icons (optional) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+body {
+  font-family: Roboto, sans-serif;
+  /* background-color: #f5f5f5; */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo-item:hover {
+  background-color: #eee;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-item span:first-child {
+  width: 30px;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
+
+.todo-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.days-since {
+  font-size: 0.8em;
+  color: #999;
+}
+
+#addTaskForm {
+  display: flex;
+  margin-top: 15px;
+}
+
+#newItem {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  outline: none;
+}
+
+#addButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+#addButton:hover {
+  background-color: #3e8e41;
+}
+
+#addButton i {
+  margin-right: 5px;
+}

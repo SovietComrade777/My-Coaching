@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding-top: initial;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    margin: 0 1rem;
+}
+
+.company-name {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.company-name h1 {
+    color: #888;
+    margin: 0;
+    font-size: 0.8rem;
+    font-family:monospace;
+    border: none;
+}
+.image-container {
+    display: flex; /* Stack images vertically */
+    flex-direction: column; /* Arranged in a top-to-bottom order */
+    width: 300px; /* Set width */
+    border-radius: 10px; /* Add rounded corners */
+    overflow: hidden; /* Clip overflowing content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+
+  .image-container a {
+    /* Remove default underline on hover */
+    text-decoration: none;
+  }
+
+  .image-container a img {
+    width: 100%; /* Images fill container width */
+    height: auto; /* Images maintain aspect ratio */
+    transition: transform 0.2s ease-in-out; /* Add smooth hover effect */
+  }
+
+  .image-container a:hover img {
+   transform: scale(1.1); /* Zoom image slightly on hover */
+}
+
+
+
+.company-name p {
+    color: #2ecc71;
+    margin: 0;
+    font-size: 1.5rem;
+    font-family:fantasy;
+    letter-spacing: 1px;
+}
+.days-left {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+  font-family: monospace;
+  margin-left: 1rem;
+}
+
+.days-left span {
+  display: inline-block; /* Allow individual styling of digits */
+  padding: 5px; /* Adjust padding for box size */
+  margin: 0 2px; /* Add spacing between "boxes" */
+  border: 1px solid #ddd; /* Optional border for boxes */
+  border-radius: 4px; /* Optional rounded corners for boxes */
+}
+
+.days-left.green {
+  color: green;
+}
+
+.days-left.yellow {
+  color: yellow;
+}
+
+.days-left.orange {
+  color: orange;
+}
+
+.days-left.red {
+  color: red;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 0.5rem;
+    }
+
+    .company-name {
+        margin: 0.5rem 0;
+    }
+}
+.slider-container {
+position: relative; /* Needed for absolute positioning of arrows */
+margin-top: 8rem;
+}
+
+.slider {
+width: 700px;
+height: 500px;
+margin: 50px auto;
+overflow: hidden;
+position: relative;
+margin-top: 0.8rem;
+margin-bottom: 2rem;
+}
+
+.slider .slides {
+display: flex;
+position: absolute;
+transition: transform 0.5s ease-in-out;
+border-radius: 15px;
+overflow: hidden;
+}
+
+  .slider .slides img {
+    width: 700px;
+    height: 700px;
+    object-fit: contain;
+    position: relative;
+}
+
+.slider .navigation {
+display: none; /* Hide the dot navigation */
+}
+
+.slider .arrows {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+.slider .arrows .arrow {
+cursor: pointer;
+color: #fff;
+font-size: 40px;
+opacity: 0.5;
+transition: opacity 0.2s ease-in-out;
+}
+
+.slider .arrows .arrow:hover {
+opacity: 1;
+}
+
+.slider .arrows .prev {
+left: 10px; /* Adjust left padding */
+}
+
+.slider .arrows .next {
+right: 10px; /* Adjust right padding */
+}
+.timeleft{
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+}
+.heading {
+    font-family: monospace;
+    text-align: center;
+  }
+  .container {
+    display: inline-block;
+    width: 325px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer; /* Add cursor for visual cue on hover */
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .container img {
+    width:-webkit-fill-available; /* Stretch image to fill container */
+    height: -webkit-fill-available; /* Stretch image to fill container */
+  }
+  .weeks-left {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: monospace;
+    margin-left: 1rem;
+  }
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  #todo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #220707;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 50px auto;
+    /* background-color: #f5f5f5; Light background color */
+  }
+  
+  #task-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    text-decoration: none;
+    color: teal; /* White text */
+    font-weight: bold;
+    font-size: 1.2em; /* Slightly larger font size */
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: all 0.2s ease-in-out; /* Smooth transition effect on hover */
+  }
+  
+  #task-button:hover {
+    background-color: #333; /* Darker background on hover */
+    transform: scale(1.05); /* Optional: Slight scale increase on hover */
+  }
+  
+  #todo-btn:hover {
+    background-color: #ddd;
+    transform: scale(1.05); /* Optional: Hover effect for slight scale increase */
+  }
+  
+  #todo-btn:focus {
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Optional: Focus effect with light shadow */
+  }
+  
+  .timer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  .weeks-left span {
+    display: inline-block; /* Allow individual styling of digits */
+    padding: 5px; /* Adjust padding for box size */
+    margin: 0 2px; /* Add spacing between "boxes" */
+    border: 1px solid #ddd; /* Optional border for boxes */
+    border-radius: 4px; /* Optional rounded corners for boxes */
+  }
+  
+  .weeks-left.green {
+    color: green;
+  }
+  
+  .weeks-left.yellow {
+    color: yellow;
+  }
+  
+  .weeks-left.orange {
+    color: orange;
+  }
+  
+  .weeks-left.red {
+    color: red;
+  }
+  /* Style.css */
+  .video-container {
+    position: relative;
+  }
+  
+  #myVideo {
+    width: 100%;
+    margin-top:6rem;
+  }
+  
+  .video-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+
+  
+  .video-container.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  
+  .video-container.fullscreen .video-name {
+    display: block;  /* Show title only in full screen */
+  }
+  
+  .video-container.fullscreen.locked {
+    cursor: none;
+  }
+  .lev{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

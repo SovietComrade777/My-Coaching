@@ -1,0 +1,29 @@
+table {
+    border-collapse: collapse; /* Removes borders between cells */
+    width: 100%; /* Adjust width as needed */
+  }
+  
+  th, td {
+    border: 1px solid black; /* Adds borders to cells */
+    padding: 5px; /* Add spacing between content and borders */
+    text-align: left; /* Align content to the left */
+  }
+  
+  th {
+    background-color: hsl(145, 52%, 45%); 
+    color:aliceblue;
+    font-family:'Courier New', Courier, monospace;/* Light gray background for headers */
+  }
+*{
+    font-family: cursive;
+}  
+.lol{
+    font-size:xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-style: dashed;
+    margin-top: 5rem;
+}
